@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FirstPage.FirstPageController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Application">
+            <items>
+                  <MenuItem fx:id="switchBoardItem" mnemonicParsing="false" onAction="#switchBoardItemAction" text="Switch board" />
+                  <MenuItem fx:id="startPageItem" mnemonicParsing="false" onAction="#startPageItemAction" text="Show start page" />
+              <MenuItem fx:id="closeItem" mnemonicParsing="false" onAction="#terminator" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <top>
+            <JFXToolbar BorderPane.alignment="CENTER">
+               <center>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <items>
+                        <JFXButton fx:id="formButton" focusTraversable="false" text="Form">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../IconPack/icons8_google_forms_48px_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="searchButton" focusTraversable="false" layoutX="10.0" layoutY="10.0" text="Search">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../IconPack/icons8_search_48px_2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="chartsButton" focusTraversable="false" layoutX="182.0" layoutY="10.0" text="Charts">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../IconPack/icons8_chart_48px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </items>
+                  </ToolBar>
+               </center>
+            </JFXToolbar>
+         </top>
+         <center>
+            <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</VBox>

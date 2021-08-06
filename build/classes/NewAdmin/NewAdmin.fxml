@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="316.0" prefWidth="302.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewAdmin.NewAdminController">
+    <stylesheets>
+        <URL value="@newadmin.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="323.0">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IconPack/icons8_lock_24px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IconPack/icons8_female_profile_24px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="newUsername" focusColor="GREEN" labelFloat="true" promptText="Username" unFocusColor="GREEN" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IconPack/icons8_key_24px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXPasswordField fx:id="newPassword" focusColor="GREEN" labelFloat="true" promptText="Password" unFocusColor="GREEN" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXPasswordField>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="64.0" prefWidth="323.0">
+               <children>
+                  <JFXButton fx:id="newLoginBtn" onAction="#loginNewAdminAction" style="-fx-border-color: green; -fx-border-radius: 20; -fx-border-width: 1; -fx-background-radius: 20;" text="SignUp New Admin" textFill="GREEN">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

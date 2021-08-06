@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="631.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChartPage.ChartPageController">
+   <content>
+      <BorderPane>
+         <center>
+            <BarChart fx:id="barChart" barGap="10.0" prefHeight="506.0" prefWidth="616.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </center>
+         <top>
+            <JFXToolbar BorderPane.alignment="CENTER">
+               <right>
+                  <JFXButton fx:id="refreshBtn" onAction="#refreshBtnAction" style="-fx-background-color: lightgreen;" text="Refresh" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../IconPack/icons8_counterclockwise_arrows_48px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </right>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="30.0" top="10.0" />
+               </padding>
+               <center>
+                  <HBox alignment="CENTER" prefHeight="23.0" prefWidth="647.0" spacing="10.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label text="Total interns" />
+                        <TextField fx:id="totalInterns" alignment="CENTER" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="113.0" />
+                     </children>
+                  </HBox>
+               </center>
+            </JFXToolbar>
+         </top>
+      </BorderPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<JFXTabPane fx:id="tabPane" prefHeight="350.0" prefWidth="323.0" stylesheets="@SwitchBoard.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SwitchBoard.SwitchBoardController">
+   <tabs>
+      <Tab text="Switch board">
+        <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #213541;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="385.0">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../IconPack/icons8_lock_24px.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../IconPack/icons8_female_profile_24px.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXTextField fx:id="loginUsername" focusColor="GREEN" labelFloat="true" promptText="Username" unFocusColor="GREEN" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="53.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../IconPack/icons8_key_24px.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXPasswordField fx:id="loginPassword" focusColor="GREEN" labelFloat="true" promptText="Password" unFocusColor="GREEN" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXPasswordField>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <JFXButton fx:id="notAdminBtn" onAction="#notAdminAction" style="-fx-border-color: green; -fx-border-radius: 20; -fx-border-width: 1; -fx-background-radius: 20;" text="Not Admin" textFill="GREEN">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <JFXButton fx:id="adminBtn" onAction="#adminBtnAction" style="-fx-border-color: green; -fx-border-radius: 20; -fx-border-width: 1; -fx-background-radius: 20;" text="Login Admin" textFill="GREEN">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>

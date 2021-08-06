@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<ScrollPane id="root" fitToHeight="true" fitToWidth="true" hbarPolicy="ALWAYS" prefHeight="764.0" prefWidth="1001.0" stylesheets="@startpage.css" vbarPolicy="ALWAYS" vvalue="1.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StartPage.StartPageController">
+   <content>
+      <VBox>
+         <children>
+            <JFXToolbar>
+               <right>
+                  <JFXCheckBox fx:id="startCheckBox" onAction="#startCheckBoxAction" text="Don't show on start up" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXCheckBox>
+               </right>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </JFXToolbar>
+            <VBox id="root" alignment="CENTER" prefHeight="489.0" prefWidth="999.0" spacing="20.0" stylesheets="@startpage.css" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="82.0" prefWidth="857.0">
+                     <children>
+                        <Label fx:id="startLabel" prefHeight="137.0" prefWidth="614.0" text="ICE Intern management system" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="42.0" prefWidth="857.0">
+                     <children>
+                        <Label fx:id="featureLabel" prefHeight="42.0" prefWidth="89.0" text="Features:" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TilePane alignment="CENTER" hgap="20.0" prefHeight="710.0" prefWidth="966.0" vgap="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <StackPane fx:id="formPane" prefHeight="339.0" prefWidth="346.0">
+                           <children>
+                              <AnchorPane opacity="0.36" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightblue;" />
+                              <VBox>
+                                 <children>
+                                    <StackPane prefHeight="26.0" prefWidth="346.0">
+                                       <children>
+                                          <HBox opacity="0.27" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: red;" />
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Form">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <VBox prefHeight="378.0" prefWidth="346.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <TextFlow lineSpacing="10.0" prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text fill="#f8eaea" strokeType="OUTSIDE" strokeWidth="0.0" text="Easy registration,">
+                                                   <font>
+                                                      <Font name="HoloLens MDL2 Assets" size="36.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fill="#f8eaea" layoutX="42.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" super easy data entry">
+                                                   <font>
+                                                      <Font name="HoloLens MDL2 Assets" size="36.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                                             </padding>
+                                          </TextFlow>
+                                          <VBox alignment="CENTER" prefHeight="119.0" prefWidth="343.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../IconPack/icons8_memo_96px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="searchPane">
+                           <children>
+                              <AnchorPane opacity="0.36" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightblue;" />
+                              <VBox>
+                                 <children>
+                                    <StackPane prefHeight="26.0" prefWidth="346.0">
+                                       <children>
+                                          <HBox opacity="0.27" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: red;" />
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Search">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <TextFlow lineSpacing="10.0" prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text fill="#f8eaea" strokeType="OUTSIDE" strokeWidth="0.0" text="Quick search,">
+                                                   <font>
+                                                      <Font name="HoloLens MDL2 Assets" size="36.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fill="#f8eaea" layoutX="42.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" super sonic data retrival">
+                                                   <font>
+                                                      <Font name="HoloLens MDL2 Assets" size="36.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                                             </padding>
+                                          </TextFlow>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../IconPack/icons8_magnifying_glass_tilted_left_96px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="emailPane">
+                           <children>
+                              <AnchorPane opacity="0.36" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightblue;" />
+                              <VBox>
+                                 <children>
+                                    <StackPane prefHeight="26.0" prefWidth="346.0">
+                                       <children>
+                                          <HBox opacity="0.27" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: red;" />
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <TextFlow lineSpacing="10.0" prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text fill="#f8eaea" strokeType="OUTSIDE" strokeWidth="0.0" text="Cool and aesthetic">
+                                                   <font>
+                                                      <Font name="HoloLens MDL2 Assets" size="36.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fill="#f8eaea" layoutX="42.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Email for more details">
+                                                   <font>
+                                                      <Font name="HoloLens MDL2 Assets" size="36.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                                             </padding>
+                                          </TextFlow>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../IconPack/icons8_gmail_96px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                        <StackPane fx:id="chartPane">
+                           <children>
+                              <AnchorPane opacity="0.36" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightblue;" />
+                              <VBox>
+                                 <children>
+                                    <StackPane prefHeight="26.0" prefWidth="346.0">
+                                       <children>
+                                          <HBox opacity="0.27" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: red;" />
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Chart">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <TextFlow lineSpacing="10.0" prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text fill="#f8eaea" strokeType="OUTSIDE" strokeWidth="0.0" text="Elegant graphical ">
+                                                   <font>
+                                                      <Font name="HoloLens MDL2 Assets" size="36.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fill="#f8eaea" layoutX="42.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="representation of data">
+                                                   <font>
+                                                      <Font name="HoloLens MDL2 Assets" size="36.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                                             </padding>
+                                          </TextFlow>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../IconPack/icons8_bar_chart_96px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </TilePane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

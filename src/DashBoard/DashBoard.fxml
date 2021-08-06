@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="780.0" prefWidth="1480.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashBoard.DashBoardController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+         <items>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#refreshBtn" text="Refresh" />
+            <ComboBox fx:id="monthSelection" focusTraversable="false" onAction="#monthSelection" prefWidth="150.0" promptText="View other months" />
+            <ToggleButton fx:id="removeChartLbsBtn" focusTraversable="false" mnemonicParsing="false" onAction="#removeChartLabels" text="Remove chart labels" />
+         </items></ToolBar>
+      <AnchorPane id="AnchorPane" prefHeight="677.0" prefWidth="851.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" VBox.vgrow="ALWAYS">
+          <stylesheets>
+              <URL value="@dashboard.css" />
+          </stylesheets>
+         <children>
+            <VBox layoutX="5.0" layoutY="5.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="179.0" prefWidth="1225.0" spacing="7.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="311.0" prefWidth="447.0" style="-fx-background-color: #A6A6A6;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefWidth="447.0" style="-fx-background-color: #A6A6A6;">
+                                 <children>
+                                    <Label fx:id="monthDisplay">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="275.0" prefWidth="502.0" style="-fx-background-color: #EDEDED;">
+                                 <children>
+                                    <Pane prefHeight="275.0" prefWidth="251.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <JFXSpinner fx:id="incomeSpinner" layoutX="22.0" layoutY="59.0" prefHeight="158.0" prefWidth="171.0" progress="0.12" />
+                                          <Label layoutX="93.0" layoutY="231.0" text="Income">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="275.0" prefWidth="251.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <JFXSpinner fx:id="expenseSpinner" layoutX="22.0" layoutY="59.0" prefHeight="158.0" prefWidth="171.0" progress="0.22" />
+                                          <Label layoutX="90.0" layoutY="231.0" text="Expense">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="311.0" prefWidth="757.0" style="-fx-background-color: #A6A6A6;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" style="-fx-background-color: #A6A6A6;">
+                                 <children>
+                                    <Label fx:id="monthDisplayForStu" text="Student payment progression">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox prefHeight="275.0" prefWidth="502.0" style="-fx-background-color: #EDEDED;" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Pane prefHeight="275.0" prefWidth="251.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label layoutX="76.0" layoutY="231.0" text="Still paying">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXProgressBar fx:id="stillPayingBar" layoutX="26.0" layoutY="222.0" prefHeight="9.0" progress="0.11" />
+                                          <Label fx:id="stillPayingLabel" layoutX="53.0" layoutY="79.0" text="20%" textFill="#4c4c4c">
+                                             <font>
+                                                <Font name="Segoe UI Light" size="80.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="275.0" prefWidth="251.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label layoutX="69.0" layoutY="231.0" text="Done paying">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXProgressBar fx:id="donePayingBar" layoutX="26.0" layoutY="222.0" prefHeight="9.0" progress="0.41" />
+                                          <Label fx:id="donePayingLabel" layoutX="53.0" layoutY="79.0" text="70%" textFill="#4c4c4c">
+                                             <font>
+                                                <Font name="Segoe UI Light" size="80.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="261.0" layoutY="10.0" prefHeight="275.0" prefWidth="251.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label layoutX="67.0" layoutY="231.0" text="Haven't paid ">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXProgressBar fx:id="haventPaidBar" layoutX="26.0" layoutY="215.0" prefHeight="9.0" progress="0.21" />
+                                          <Label fx:id="haventPaidLabel" layoutX="53.0" layoutY="79.0" text="33%" textFill="#4c4c4c">
+                                             <font>
+                                                <Font name="Segoe UI Light" size="80.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <PieChart fx:id="pieChart" title="Ice intern stats" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

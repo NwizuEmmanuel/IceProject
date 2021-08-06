@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminBoard.AdminBoardController">
+   <top>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Application">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#internFeesAction" text="Intern fees" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="switchBoardItem" mnemonicParsing="false" onAction="#switchBoardItemAction" text="Switch board" />
+                  <MenuItem fx:id="signOutItem" mnemonicParsing="false" onAction="#signOutItemAction" text="Sign out" />
+              <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#closeMenuItemAction" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox fx:id="basePane" prefHeight="637.0" prefWidth="269.0" style="-fx-background-color: #CDCDCD;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="dashBoardBtn" alignment="CENTER_LEFT" spacing="5.0" styleClass="btns" stylesheets="@adminboard.css">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IconPack/icons8_dashboard_24px.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Dash board">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="ledgerBtn" alignment="CENTER_LEFT" spacing="5.0" styleClass="btns" stylesheets="@adminboard.css">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IconPack/icons8_general_ledger_24px.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Ledger">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="scheduleBtn" alignment="CENTER_LEFT" spacing="5.0" styleClass="btns" stylesheets="@adminboard.css">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IconPack/icons8_schedule_24px.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Schedules">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

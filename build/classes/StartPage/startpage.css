@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#root{
+    -fx-background-image: url('/ImagePack/image.jpg');
+    -fx-background-repeat: repeat;
+    -fx-background-size: 100%;
+    -fx-background-position: center;
+}
+
+#root2{
+    -fx-background-color: transparent;
+}
